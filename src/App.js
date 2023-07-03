@@ -1,10 +1,11 @@
 
 import './App.css';
 import { useState } from 'react';
+import { useCount } from './useCount';
 
 function App() {
 
-  const[ count, setCount]=useState(0);
+  const {count, increase, decrease , reset} = useCount(6);
 
   return (
     <div className="App">
@@ -13,9 +14,9 @@ function App() {
 
       <h2>{count}</h2>
 
-<button onClick={()=> setCount(count+1)}>+</button>
-<button onClick={()=> setCount(0)}>Reset</button>
-<button onClick={()=> setCount(count-1)}>-</button>
+<button onClick={increase }>+</button>
+<button onClick={reset}>Reset</button>
+<button onClick={decrease}>-</button>
     </div>
   );
 }
