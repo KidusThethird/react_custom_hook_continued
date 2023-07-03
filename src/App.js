@@ -5,7 +5,7 @@ import { useCount } from './useCount';
 
 function App() {
 
-  const {count, increase, decrease , reset} = useCount(6);
+  const {count, increase, decrease , reset} = useCount();
 
   return (
     <div className="App">

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 
-export const useCount = (init) => {
+export const useCount = (init=1) => {
 
 
     const[ count, setCount]=useState(init);
@@ -14,7 +14,7 @@ export const useCount = (init) => {
     }
     
     const decrease = () => {
-        setCount(count-1)
+        setCount(count-1) 
     }
     
     const reset = () => {
